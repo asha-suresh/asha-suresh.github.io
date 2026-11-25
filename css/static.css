@@ -1,0 +1,217 @@
+/* =====================================================================
+   static.css
+   Replaces the pieces the React version got from Material UI
+   (base reset, app bar, drawer, chips, icon buttons) and adds the
+   few extras the static site needs. Loaded after styles.css.
+   ===================================================================== */
+
+/* ---------- Base reset (was MUI CssBaseline) ---------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  font: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+/* Font Awesome icons sit on the text baseline like the MUI ones did */
+.svg-inline--fa {
+  vertical-align: -0.125em;
+}
+
+/* ---------- App bar (was MUI AppBar + Toolbar) ---------- */
+
+#navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1100;
+}
+
+.nav-toolbar {
+  display: flex;
+  align-items: center;
+  min-height: 64px;
+  padding: 0 24px;
+}
+
+.nav-logo {
+  margin-right: auto;
+  color: var(--c1) !important;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.nav-logo:hover {
+  color: var(--c1) !important;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+/* icon buttons should not get the nav-link underline */
+.navigation-bar .icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin: 0 12px 0 0;
+  padding: 0;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 24px;
+  transition: background .2s ease;
+}
+
+.navigation-bar .icon-btn::after {
+  display: none;
+}
+
+.navigation-bar .icon-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.light-mode .navigation-bar .icon-btn {
+  color: #0d1116;
+}
+
+.light-mode .navigation-bar .icon-btn:hover {
+  background: rgba(13, 17, 22, 0.06);
+}
+
+.menu-btn {
+  display: none !important;
+}
+
+/* sun shows in dark mode (switch to light), moon in light mode */
+.theme-btn .icon-moon,
+.light-mode .theme-btn .icon-sun {
+  display: none;
+}
+
+.light-mode .theme-btn .icon-moon {
+  display: inline;
+}
+
+@media (max-width: 599px) {
+  .nav-toolbar {
+    min-height: 56px;
+    padding: 0 16px;
+  }
+
+  .menu-btn {
+    display: inline-flex !important;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-logo {
+    font-size: 18px;
+  }
+}
+
+/* ---------- Mobile drawer (was MUI Drawer) ---------- */
+
+.drawer-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.mobile-drawer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1201;
+  width: 240px;
+  background: #fff;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  transform: translateX(-100%);
+  transition: transform .25s ease;
+}
+
+.mobile-drawer.is-open {
+  transform: translateX(0);
+}
+
+.mobile-drawer hr {
+  margin: 0;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.mobile-drawer ul {
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+}
+
+.mobile-drawer li button {
+  display: block;
+  width: 100%;
+  padding: 12px 16px;
+  color: #0d1116;
+  font-size: 1rem;
+  transition: background .2s ease;
+}
+
+.mobile-drawer li button:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* ---------- Hero tweaks for Font Awesome icons ---------- */
+
+.portfolio .scroll-btn svg {
+  font-size: 26px;
+}
+
+/* ---------- Skill chips (was MUI Chip) ---------- */
+
+.flex-chips .chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 12px;
+  vertical-align: middle;
+}
+
+/* ---------- Contact form status message ---------- */
+
+.contact-form .form-status {
+  margin: 0;
+  color: #4be3a0;
+  font-size: 0.92rem;
+}
+
+.light-mode .contact-form .form-status {
+  color: #0b8a55;
+}

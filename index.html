@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0a0c10" />
+  <meta name="description" content="Asha Suresh, backend engineer specialising in Java, Spring Boot, microservices and cloud." />
+  <title>Asha Suresh · Backend Engineer</title>
+  <link rel="icon" href="favicon.ico" />
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/static.css" />
+
+  <!-- Icons (Font Awesome, swaps <i> tags for inline SVGs) -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js"></script>
+
+  <!-- Site behaviour -->
+  <script defer src="js/main.js"></script>
+
+  <!-- If JavaScript is off, show everything without animations -->
+  <noscript>
+    <style>
+      .section-title span, .expertise-title span, .education-title span, .projects-title span,
+      .skills-grid .skill, .skill-icon, .flex-chips .chip, .skill-inner h3, .skill-inner p,
+      .career-subtitle, .career-side, .career-content, .career-dot,
+      .edu-year, .edu-node, .edu-card, .edu-badge, .proj-card, .proj-cover-icon,
+      .contact-info, .contact-form { opacity: 1 !important; scale: 1 !important; animation: none !important; }
+      .career-list::before, .edu-timeline::before, .edu-stem { scale: 1 1 !important; }
+    </style>
+  </noscript>
+</head>
+
+<body>
+<div class="main-container dark-mode" id="app">
+
+  <!-- ================= Navigation ================= -->
+  <header id="navigation" class="navbar-fixed-top">
+    <div class="navigation-bar nav-toolbar">
+      <button class="icon-btn menu-btn" type="button" aria-label="Open menu" aria-controls="mobile-drawer" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <button class="icon-btn theme-btn" type="button" aria-label="Switch to light mode">
+        <span class="icon-sun"><i class="fa-solid fa-sun"></i></span>
+        <span class="icon-moon"><i class="fa-solid fa-moon"></i></span>
+      </button>
+
+      <a href="#home" class="nav-logo">&lt;/&gt; Asha Suresh</a>
+
+      <nav class="nav-links" aria-label="Main">
+        <button type="button" data-target="expertise">Expertise</button>
+        <button type="button" data-target="history">History</button>
+        <button type="button" data-target="education">Education</button>
+        <button type="button" data-target="projects">Projects</button>
+        <button type="button" data-target="contact">Contact</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="drawer-backdrop" hidden></div>
+  <aside id="mobile-drawer" class="mobile-drawer navigation-bar-responsive" aria-label="Menu" aria-hidden="true">
+    <p class="mobile-menu-top"><i class="fa-solid fa-list"></i> Menu</p>
+    <hr />
+    <ul>
+      <li><button type="button" data-target="expertise">Expertise</button></li>
+      <li><button type="button" data-target="history">History</button></li>
+      <li><button type="button" data-target="education">Education</button></li>
+      <li><button type="button" data-target="projects">Projects</button></li>
+      <li><button type="button" data-target="contact">Contact</button></li>
+    </ul>
+  </aside>
+
+  <!-- ================= Hero ================= -->
+  <main class="portfolio" id="home">
+    <section class="hero">
+
+      <div class="image-wrapper">
+        <img src="assets/images/asha.png" alt="Asha Suresh" />
+      </div>
+
+      <div class="intro">
+        <div class="accent-line"></div>
+        <h1>
+          Hi, I'm Asha —
+          <br />
+          Backend Engineer
+        </h1>
+        <p>
+          Building reliable, scalable applications with Java,
+          Spring Boot and modern web technologies.
+        </p>
+        <a href="#expertise" class="scroll-btn" aria-label="Scroll down">
+          <i class="fa-solid fa-chevron-down"></i>
+        </a>
+      </div>
+
+      <aside class="side-info">
+        <div class="info-block">
+          <h2>ABOUT ME</h2>
+          <p>
+            Backend-focused software engineer experienced in Java, Spring Boot,
+            REST APIs and microservices, with a strong eye for data accuracy.
+          </p>
+          <a href="#expertise" class="text-link">LEARN MORE <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="info-block">
+          <h2>MY WORK</h2>
+          <p>
+            From secure REST APIs to a full-stack, microservices-based
+            e-commerce application built with Spring Boot, Docker and AWS.
+          </p>
+          <a href="#projects" class="text-link">BROWSE PROJECTS <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+
+        <div class="info-block">
+          <h2>FOLLOW ME</h2>
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/in/ashasuresh01" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/asha-suresh" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="mailto:ashasureshdev01@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+      </aside>
+
+    </section>
+  </main>
+
+  <!-- ================= Expertise ================= -->
+  <div class="container" id="expertise">
+    <div class="skills-container" data-reveal>
+      <h1 class="expertise-title" data-split>Expertise</h1>
+
+      <div class="skills-grid">
+
+        <div class="skill" style="--card: 0">
+          <div class="skill-inner">
+            <div class="skill-icon"><i class="fa-solid fa-server fa-2x"></i></div>
+            <h3>Backend Development</h3>
+            <p>Experienced in developing scalable backend applications and microservices using Java and Spring Boot, with a focus on secure REST APIs and database optimization.</p>
+            <div class="flex-chips" data-chips="Java, SpringBoot, Spring MVC, Spring Security, Spring Cloud, Rest APIs, JWT, Postman, Kafka, Microservices">
+              <span class="chip-title">Tech stack:</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill" style="--card: 1">
+          <div class="skill-inner">
+            <div class="skill-icon"><i class="fa-solid fa-database fa-2x"></i></div>
+            <h3>Database &amp; API Development</h3>
+            <p>Skilled in designing RESTful APIs, managing relational databases, and optimizing data access using SQL, Hibernate, and JPA.</p>
+            <div class="flex-chips" data-chips="PostgreSQL, MySQL, SQL, Spring Data JPA, Hibernate, Swagger, OpenAPI, RESTful Services">
+              <span class="chip-title">Tech stack:</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill" style="--card: 2">
+          <div class="skill-inner">
+            <div class="skill-icon"><i class="fa-brands fa-docker fa-2x"></i></div>
+            <h3>DevOps, Cloud &amp; Testing</h3>
+            <p>Hands-on experience with Docker, AWS, CI/CD pipelines, application monitoring, and automated testing to ensure reliable software delivery.</p>
+            <div class="flex-chips" data-chips="Docker, Docker Compose, AWS EC2, AWS S3, AWS IAM, Git, GitHub Actions, Maven, Gradle, JUnit, Mockito, Prometheus, Grafana">
+              <span class="chip-title">Tech stack:</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= Career History ================= -->
+  <div id="history">
+    <div class="career-section" data-reveal>
+      <h1 class="section-title" data-split>Career History</h1>
+      <p class="career-subtitle">
+        Where I've worked, what I've built, and how I've grown as an engineer.
+      </p>
+
+      <ol class="career-list">
+        <li class="career-item is-current" style="--row: 0">
+          <div class="career-side">
+            <span class="career-index">01</span>
+            <span class="career-date">2025 – Present</span>
+          </div>
+          <span class="career-dot" aria-hidden="true"></span>
+          <div class="career-content">
+            <span class="career-badge">Current</span>
+            <h3>Career Development &amp; Independent Project Work</h3>
+            <span class="career-company">Career Break</span>
+            <p>Designed and developed a full-stack, microservices-based e-commerce application.</p>
+          </div>
+        </li>
+
+        <li class="career-item" style="--row: 1">
+          <div class="career-side">
+            <span class="career-index">02</span>
+            <span class="career-date">Dec 2022 – Mar 2024</span>
+          </div>
+          <span class="career-dot" aria-hidden="true"></span>
+          <div class="career-content">
+            <h3>Data Specialist</h3>
+            <span class="career-company">United Kingdom</span>
+            <p>Performed automated and manual data validation, processed large datasets, identified errors, and collaborated with teams to improve data accuracy and workflow efficiency.</p>
+          </div>
+        </li>
+
+        <li class="career-item" style="--row: 2">
+          <div class="career-side">
+            <span class="career-index">03</span>
+            <span class="career-date">Mar 2022 – Sep 2022</span>
+          </div>
+          <span class="career-dot" aria-hidden="true"></span>
+          <div class="career-content">
+            <h3>Software Engineer Trainee</h3>
+            <span class="career-company">Nkorr Technologies</span>
+            <p>Developed and optimized REST APIs using Java, Spring Boot, Docker, JWT, Hibernate, SQL, and JUnit, improving performance, security, and application reliability.</p>
+          </div>
+        </li>
+
+        <li class="career-item" style="--row: 3">
+          <div class="career-side">
+            <span class="career-index">04</span>
+            <span class="career-date">Sep 2021 – Jan 2022</span>
+          </div>
+          <span class="career-dot" aria-hidden="true"></span>
+          <div class="career-content">
+            <h3>Software Engineer Intern</h3>
+            <span class="career-company">Ionaught Technologies Pvt Ltd · Kerala, India</span>
+            <p>Completed full-stack development training and e-commerce projects using React.js, Node.js, Express.js, JavaScript, HTML, CSS, MySQL, and MongoDB.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+  <!-- ================= Education ================= -->
+  <div class="container" id="education">
+    <div class="education-container" data-reveal>
+      <h1 class="education-title" data-split>Education</h1>
+
+      <ol class="edu-timeline">
+
+        <li class="edu-item" style="--card: 0">
+          <span class="edu-year">2015 — 2018</span>
+          <div class="edu-node"><i class="fa-solid fa-laptop-code"></i></div>
+          <span class="edu-stem" aria-hidden="true"></span>
+          <div class="edu-card" data-spotlight>
+            <span class="edu-watermark" aria-hidden="true">2018</span>
+            <span class="edu-level">Diploma</span>
+            <h3>Diploma in Computer Engineering</h3>
+            <p class="edu-school"><i class="fa-solid fa-building-columns"></i> Govt. Kerala State Board of Technical Education</p>
+            <div class="edu-footer">
+              <div class="edu-meta">
+                <span class="edu-date"><i class="fa-solid fa-calendar-days"></i> Jul 2015 – Apr 2018</span>
+                <span class="edu-duration"><i class="fa-solid fa-clock"></i> 3 years</span>
+              </div>
+              <span class="edu-badge edu-badge--blue"><i class="fa-solid fa-award"></i> First Class</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="edu-item" style="--card: 1">
+          <span class="edu-year">2018 — 2021</span>
+          <div class="edu-node"><i class="fa-solid fa-user-graduate"></i></div>
+          <span class="edu-stem" aria-hidden="true"></span>
+          <div class="edu-card" data-spotlight>
+            <span class="edu-watermark" aria-hidden="true">2021</span>
+            <span class="edu-level">Bachelor's Degree</span>
+            <h3>B.Tech Computer Science</h3>
+            <p class="edu-school"><i class="fa-solid fa-building-columns"></i> APJ Abdul Kalam Technological University</p>
+            <div class="edu-footer">
+              <div class="edu-meta">
+                <span class="edu-date"><i class="fa-solid fa-calendar-days"></i> Jul 2018 – May 2021</span>
+                <span class="edu-duration"><i class="fa-solid fa-clock"></i> 3 years</span>
+              </div>
+              <span class="edu-badge edu-badge--blue"><i class="fa-solid fa-award"></i> First Class</span>
+            </div>
+          </div>
+        </li>
+
+        <li class="edu-item" style="--card: 2">
+          <span class="edu-year">2022 — 2023</span>
+          <div class="edu-node"><i class="fa-solid fa-graduation-cap"></i></div>
+          <span class="edu-stem" aria-hidden="true"></span>
+          <div class="edu-card" data-spotlight>
+            <span class="edu-watermark" aria-hidden="true">2023</span>
+            <span class="edu-level">Master's Degree</span>
+            <h3>MSc Software Engineering</h3>
+            <p class="edu-school"><i class="fa-solid fa-building-columns"></i> De Montfort University</p>
+            <div class="edu-footer">
+              <div class="edu-meta">
+                <span class="edu-date"><i class="fa-solid fa-calendar-days"></i> Sep 2022 – Sep 2023</span>
+                <span class="edu-duration"><i class="fa-solid fa-clock"></i> 1 year</span>
+              </div>
+              <span class="edu-badge edu-badge--gold"><i class="fa-solid fa-medal"></i> Distinction</span>
+            </div>
+          </div>
+        </li>
+
+      </ol>
+    </div>
+  </div>
+
+  <!-- ================= Personal Projects ================= -->
+  <div class="container" id="projects">
+    <div class="projects-section" data-reveal>
+      <h1 class="projects-title" data-split>Personal Projects</h1>
+
+      <!-- Featured -->
+      <div class="proj-featured">
+        <article class="proj-card proj-card--featured" style="--card: 0" data-spotlight>
+          <!-- To use a screenshot instead of the generated cover, replace the contents of
+               .proj-cover with: <img src="assets/images/your-file.png" alt="..." /> -->
+          <div class="proj-cover proj-cover--blue">
+            <span class="proj-cover-grid" aria-hidden="true"></span>
+            <span class="proj-cover-orb proj-cover-orb--a" aria-hidden="true"></span>
+            <span class="proj-cover-orb proj-cover-orb--b" aria-hidden="true"></span>
+            <div class="proj-cover-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+            <div class="proj-cover-chips" aria-hidden="true"><span>Java</span><span>Spring Boot</span><span>Spring Cloud</span></div>
+          </div>
+
+          <div class="proj-body">
+            <div class="proj-meta">
+              <span class="proj-tag"><i class="fa-solid fa-star"></i> Featured · Personal Project</span>
+              <span class="proj-date"><i class="fa-solid fa-calendar-days"></i> Jan 2025 – Present</span>
+            </div>
+            <h3>Full-Stack E-commerce Microservices</h3>
+            <p class="proj-summary">A production-style e-commerce platform built during my career break to strengthen backend development and cloud engineering skills.</p>
+            <ul class="proj-highlights">
+              <li><i class="fa-solid fa-check"></i><span>Microservices with Spring Boot &amp; Spring Cloud, Eureka discovery and API Gateway routing</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Spring Security with JWT auth, plus Stripe payment gateway integration</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Event-driven OTP verification and email notifications with Kafka &amp; JavaMail</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Containerised with Docker Compose; monitored with Prometheus &amp; Grafana</span></li>
+              <li><i class="fa-solid fa-check"></i><span>React.js frontend, deployed with AWS EC2, S3 and IAM</span></li>
+            </ul>
+            <div class="proj-footer">
+              <div class="proj-tech">
+                <span>Java</span><span>Spring Boot</span><span>Spring Cloud</span><span>React.js</span><span>PostgreSQL</span><span>Kafka</span><span>Docker</span><span>AWS</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Others -->
+      <div class="proj-grid">
+
+        <article class="proj-card" style="--card: 1" data-spotlight>
+          <div class="proj-cover proj-cover--orange">
+            <span class="proj-cover-grid" aria-hidden="true"></span>
+            <span class="proj-cover-orb proj-cover-orb--a" aria-hidden="true"></span>
+            <span class="proj-cover-orb proj-cover-orb--b" aria-hidden="true"></span>
+            <div class="proj-cover-icon"><i class="fa-solid fa-car-side"></i></div>
+            <div class="proj-cover-chips" aria-hidden="true"><span>Java</span><span>Spring Boot</span><span>JWT</span></div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-meta"><span class="proj-tag">Personal Project</span></div>
+            <h3>Vehicle Rental Management</h3>
+            <p class="proj-summary">A full-featured Spring Boot backend for a vehicle rental platform covering users, inventory, orders and payments.</p>
+            <ul class="proj-highlights">
+              <li><i class="fa-solid fa-check"></i><span>Secure REST APIs with JWT and role-based access for admins and customers</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Stripe payment integration and order processing</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Documented with Swagger / OpenAPI for easy frontend integration</span></li>
+            </ul>
+            <div class="proj-footer">
+              <div class="proj-tech">
+                <span>Java</span><span>Spring Boot</span><span>JWT</span><span>JPA / Hibernate</span><span>PostgreSQL</span><span>Stripe</span><span>Swagger</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj-card" style="--card: 2" data-spotlight>
+          <div class="proj-cover proj-cover--green">
+            <span class="proj-cover-grid" aria-hidden="true"></span>
+            <span class="proj-cover-orb proj-cover-orb--a" aria-hidden="true"></span>
+            <span class="proj-cover-orb proj-cover-orb--b" aria-hidden="true"></span>
+            <div class="proj-cover-icon"><i class="fa-solid fa-seedling"></i></div>
+            <div class="proj-cover-chips" aria-hidden="true"><span>Docker</span><span>CI/CD</span><span>GitHub Actions</span></div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-meta"><span class="proj-tag">MSc Project</span></div>
+            <h3>Food Waste Reduction Management</h3>
+            <p class="proj-summary">A web application that helps individuals and communities track, manage and minimise their food waste.</p>
+            <ul class="proj-highlights">
+              <li><i class="fa-solid fa-check"></i><span>Containerised with Docker</span></li>
+              <li><i class="fa-solid fa-check"></i><span>CI/CD pipeline that builds and pushes a new image on every change</span></li>
+              <li><i class="fa-solid fa-check"></i><span>GitHub Actions automation to keep highlights in sync</span></li>
+            </ul>
+            <div class="proj-footer">
+              <div class="proj-tech"><span>Docker</span><span>CI/CD</span><span>GitHub Actions</span></div>
+              <a class="proj-link" href="https://github.com/asha-suresh" target="_blank" rel="noreferrer">
+                <i class="fa-brands fa-github"></i> View on GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj-card" style="--card: 3" data-spotlight>
+          <div class="proj-cover proj-cover--pink">
+            <span class="proj-cover-grid" aria-hidden="true"></span>
+            <span class="proj-cover-orb proj-cover-orb--a" aria-hidden="true"></span>
+            <span class="proj-cover-orb proj-cover-orb--b" aria-hidden="true"></span>
+            <div class="proj-cover-icon"><i class="fa-solid fa-palette"></i></div>
+            <div class="proj-cover-chips" aria-hidden="true"><span>Python</span><span>Deep Learning</span><span>OpenCV</span></div>
+          </div>
+          <div class="proj-body">
+            <div class="proj-meta"><span class="proj-tag">Bachelor's Project</span></div>
+            <h3>Colorizer</h3>
+            <p class="proj-summary">A deep-learning approach to bringing colour to old black-and-white images and videos.</p>
+            <ul class="proj-highlights">
+              <li><i class="fa-solid fa-check"></i><span>Built with Python, MoviePy and OpenCV</span></li>
+              <li><i class="fa-solid fa-check"></i><span>Automatic image compression for faster processing in the UI</span></li>
+            </ul>
+            <div class="proj-footer">
+              <div class="proj-tech"><span>Python</span><span>Deep Learning</span><span>OpenCV</span><span>MoviePy</span></div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= Contact ================= -->
+  <div id="contact">
+    <div class="contact-section" data-reveal>
+      <h1 class="section-title" data-split>Contact Me</h1>
+
+      <div class="contact-layout">
+        <div class="contact-info">
+          <h2>Let's build something together.</h2>
+          <p>
+            Got a project waiting to be realized, or a role you think I'd be a good fit for?
+            Send me a message and I'll get back to you.
+          </p>
+          <ul class="contact-links">
+            <li><a href="mailto:ashasureshdev01@gmail.com"><i class="fa-solid fa-envelope"></i> ashasureshdev01@gmail.com</a></li>
+            <li><a href="https://www.linkedin.com/in/ashasuresh01" target="_blank" rel="noreferrer"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/ashasuresh01</a></li>
+            <li><a href="https://github.com/asha-suresh" target="_blank" rel="noreferrer"><i class="fa-brands fa-github"></i> github.com/asha-suresh</a></li>
+          </ul>
+        </div>
+
+        <form class="contact-form" id="contact-form" novalidate autocomplete="off">
+          <div class="form-row">
+            <div class="field" data-field="name">
+              <label for="contact-name">Name</label>
+              <input id="contact-name" name="name" type="text" placeholder="What's your name?" />
+              <span class="field-error" hidden>Please enter your name</span>
+            </div>
+            <div class="field" data-field="email">
+              <label for="contact-email">Email / Phone</label>
+              <input id="contact-email" name="email" type="text" placeholder="How can I reach you?" />
+              <span class="field-error" hidden>Please enter your email or phone number</span>
+            </div>
+          </div>
+
+          <div class="field" data-field="message">
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" name="message" rows="7" placeholder="Send me any inquiries or questions"></textarea>
+            <span class="field-error" hidden>Please enter the message</span>
+          </div>
+
+          <p class="form-status" role="status" hidden></p>
+
+          <button type="submit" class="send-btn">
+            Send message <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= Footer ================= -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-name">Asha Suresh</span>
+        <span class="footer-role">Backend Engineer · Java &amp; Spring Boot</span>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/asha-suresh" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/ashasuresh01" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="mailto:ashasureshdev01@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+      </footer>
+
+</div>
+</body>
+</html>
